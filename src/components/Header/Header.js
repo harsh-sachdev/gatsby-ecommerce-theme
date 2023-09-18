@@ -80,13 +80,14 @@ const Header = (prop) => {
 
   return (
     <div className={styles.root}>
-      <div className={styles.headerMessageContainer}>
+      {/* <div className={styles.headerMessageContainer}>
         <span>{bannerMessage}</span>
-      </div>
+      </div> */}
       <Container size={'large'} spacing={'min'}>
         {/* header container */}
         <div className={styles.header}>
-          <div className={styles.linkContainer}>
+          <div></div>
+          {/* <div className={styles.linkContainer}>
             <nav
               role={'presentation'}
               onMouseLeave={() => {
@@ -106,8 +107,8 @@ const Header = (prop) => {
                 </Link>
               ))}
             </nav>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             role={'presentation'}
             onClick={() => {
               setMobileMenu(!mobileMenu);
@@ -116,9 +117,9 @@ const Header = (prop) => {
             className={styles.burgerIcon}
           >
             <Icon symbol={`${mobileMenu === true ? 'cross' : 'burger'}`}></Icon>
-          </div>
+          </div> */}
           <Brand />
-          <div className={styles.actionContainers}>
+          {/* <div className={styles.actionContainers}>
             <button
               aria-label="Search"
               className={`${styles.iconButton} ${styles.iconContainer}`}
@@ -158,11 +159,11 @@ const Header = (prop) => {
             <div className={styles.notificationContainer}>
               <AddNotification openCart={() => setShowMiniCart(true)} />
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* search container */}
-        <div
+        {/* <div
           className={`${styles.searchContainer} ${
             showSearch === true ? styles.show : styles.hide
           }`}
@@ -202,11 +203,11 @@ const Header = (prop) => {
             }}
             className={styles.backdrop}
           ></div>
-        </div>
+        </div> */}
       </Container>
 
       {/* menu container */}
-      <div
+      {/* <div
         role={'presentation'}
         onMouseLeave={() => setShowMenu(false)}
         onMouseEnter={() => setShowMenu(true)}
@@ -217,15 +218,15 @@ const Header = (prop) => {
         <Container size={'large'} spacing={'min'}>
           <ExpandedMenu menu={menu} />
         </Container>
-      </div>
+      </div> */}
 
       {/* minicart container */}
-      <Drawer visible={showMiniCart} close={() => setShowMiniCart(false)}>
+      {/* <Drawer visible={showMiniCart} close={() => setShowMiniCart(false)}>
         <MiniCart />
-      </Drawer>
+      </Drawer> */}
 
       {/* mobile menu */}
-      <div className={styles.mobileMenuContainer}>
+      {/* <div className={styles.mobileMenuContainer}>
         <Drawer
           hideCross
           top={'98px'}
@@ -235,7 +236,7 @@ const Header = (prop) => {
         >
           <MobileNavigation close={() => setMobileMenu(false)} />
         </Drawer>
-      </div>
+      </div> */}
     </div>
   );
 };

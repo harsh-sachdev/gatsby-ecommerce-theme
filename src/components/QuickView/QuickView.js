@@ -17,15 +17,15 @@ const QuickView = (props) => {
   const ctxAddItemNotification = useContext(AddItemNotificationContext);
   const showNotification = ctxAddItemNotification.showNotification;
   const [activeSwatch, setActiveSwatch] = useState(
-    sampleProduct.colorOptions[0]
+    sampleProduct?.colorOptions[0]
   );
-  const [activeSize, setActiveSize] = useState(sampleProduct.sizeOptions[0]);
+  const [activeSize, setActiveSize] = useState(sampleProduct?.sizeOptions[0]);
 
   const handleAddToBag = () => {
     close();
     showNotification();
   };
-
+  if(!sampleProduct) return null;
   return (
     <div className={styles.root}>
       <div className={styles.titleContainer}>
@@ -33,7 +33,7 @@ const QuickView = (props) => {
       </div>
       <div className={styles.contentContainer}>
         <div className={styles.productContainer}>
-          <span className={styles.productName}>{sampleProduct.name}</span>
+          <span className={styles.productName}>{sampleProduct?.name}</span>
           <div className={styles.price}>
             <CurrencyFormatter amount={sampleProduct.price}></CurrencyFormatter>
           </div>

@@ -6,6 +6,8 @@
 .content {
     padding-top: 72px;
     padding-bottom: 40px;
+    color: var(--standard-white);
+    text-align: center;
 }
 
 .contentTop {
@@ -248,4 +250,8 @@
     .socialIconContainer:first-child {
         margin-right: 0px;
     }
+}
+
+a {
+    color: white !important;
 }

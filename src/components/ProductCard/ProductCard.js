@@ -19,6 +19,7 @@ const ProductCard = (props) => {
   } = props;
 
   const handleRouteToProduct = () => {
+    return null;
     navigate('/product/sample');
   };
 
@@ -40,14 +41,14 @@ const ProductCard = (props) => {
         role={'presentation'}
       >
         <img style={{ height: `${height}px` }} src={image} alt={imageAlt}></img>
-        <div
+        {/* <div
           className={styles.bagContainer}
           role={'presentation'}
           onClick={(e) => handleQuickView(e)}
         >
           <Icon symbol={'bagPlus'} />
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={styles.heartContainer}
           role={'presentation'}
           onClick={(e) => handleFavorite(e)}
@@ -60,23 +61,27 @@ const ProductCard = (props) => {
           >
             <Icon symbol={'heartFill'}></Icon>
           </div>
-        </div>
+        </div> */}
       </div>
       <div className={styles.detailsContainer}>
         <span className={styles.productName}>{name}</span>
-        <div className={styles.prices}>
-          <span
-            className={`${originalPrice !== undefined ? styles.salePrice : ''}`}
-          >
-            <CurrencyFormatter amount={price}></CurrencyFormatter>
-          </span>
-          {originalPrice && (
-            <span className={styles.originalPrice}>
-              <CurrencyFormatter amount={originalPrice}></CurrencyFormatter>
+        {price && (
+          <div className={styles.prices}>
+            <span
+              className={`${
+                originalPrice !== undefined ? styles.salePrice : ''
+              }`}
+            >
+              <CurrencyFormatter amount={price}></CurrencyFormatter>
             </span>
-          )}
-        </div>
-        <span className={styles.meta}>{meta}</span>
+            {originalPrice && (
+              <span className={styles.originalPrice}>
+                <CurrencyFormatter amount={originalPrice}></CurrencyFormatter>
+              </span>
+            )}
+          </div>
+        )}
+        {meta && <span className={styles.meta}>{meta}</span>}
       </div>
     </div>
   );

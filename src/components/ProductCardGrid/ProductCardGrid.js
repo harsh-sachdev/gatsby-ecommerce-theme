@@ -13,6 +13,8 @@ const ProductCardGrid = (props) => {
     gridTemplateColumns: `repeat(${columns}, 1fr)`,
   };
 
+  console.log(showSlider)
+
   const renderCards = () => {
     return data.map((product, index) => {
       return (
@@ -49,9 +51,9 @@ const ProductCardGrid = (props) => {
         </div>
       )}
 
-      <Drawer visible={showQuickView} close={() => setShowQuickView(false)}>
+      {/* <Drawer visible={showQuickView} close={() => setShowQuickView(false)}>
         <QuickView close={() => setShowQuickView(false)} />
-      </Drawer>
+      </Drawer> */}
     </div>
   );
 };
