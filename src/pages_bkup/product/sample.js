@@ -31,7 +31,8 @@ const ProductPage = (props) => {
   );
   const [activeSize, setActiveSize] = useState(sampleProduct?.sizeOptions[0]);
   const suggestions = generateMockProductData(4, 'woman');
-
+  
+  if(!sampleProduct) return null;
   return (
     <Layout>
       <div className={styles.root}>
@@ -41,7 +42,7 @@ const ProductPage = (props) => {
               { link: '/', label: 'Home' },
               { label: 'Men', link: '/shop' },
               { label: 'Sweater', link: '/shop' },
-              { label: `${sampleProduct.name}` },
+              { label: `${sampleProduct?.name}` },
             ]}
           />
           <div className={styles.content}>
