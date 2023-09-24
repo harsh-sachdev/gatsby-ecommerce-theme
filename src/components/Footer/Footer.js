@@ -1,12 +1,7 @@
 import { Link } from 'gatsby';
 import React, { useState } from 'react';
 
-import Accordion from '../Accordion';
 import Container from '../Container';
-import Dropdown from '../Dropdown/Dropdown';
-import FormInputField from '../FormInputField/FormInputField';
-import Icon from '../Icons/Icon';
-import Button from '../Button';
 import Config from '../../config.json';
 import * as styles from './Footer.module.css';
 
@@ -48,10 +43,7 @@ const Footer = (prop) => {
             Phone Number: 7697642244
           </div><br/>
           <div>
-            Instagram Id: resin_creation_by_pooja
-          </div><br/>
-          <div>
-            Instagram Profile: <a href="https://www.instagram.com/resin_creation_by_pooja">https://www.instagram.com/resin_creation_by_pooja</a>
+            Instagram Profile: <a href="https://www.instagram.com/art_mold_studios">https://www.instagram.com/art_mold_studios</a>
           </div><br/>
         </div>
       </Container>
